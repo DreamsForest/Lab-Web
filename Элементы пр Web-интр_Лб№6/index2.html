@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style2.css">
+        <title>Фреймворк</title>
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body onload="NextQuestion(0)">
+        <main>
+            <!-- Вывод результата теста -->
+            <div class="modal-container" id="score-modal">
+              
+                <div class="modal-content-container">
+                  
+                    <h1>Результат первого теста по Истории.</h1>
+                  
+                    <div class="grade-details">
+                        <p>Дано ответов : 10</p>
+                        <p>Неправильных ответов : <span id="wrong-answers"></span></p>
+                        <p>Правильных ответов : <span id="right-answers"></span></p>
+                        <p>Оценка : <span id="grade-percentage"></span>%</p>
+                        <p ><span id="remarks"></span></p>
+                    </div>
+                  
+                    <div class="modal-button-container">
+                        <button onclick="closeScoreModal()">Продолжить</button>
+                    </div>
+                  
+                </div>
+            </div>
+    
+            <div class="game-quiz-container">
+              
+                <div class="game-details-container">
+                    <h1>Очки : <span id="player-score"></span> / 10</h1>
+                    <h1> Вопросы : <span id="question-number"></span> / 10</h1>
+                </div>
+    
+                <div class="game-question-container">
+                    <h1 id="display-question"></h1>
+                </div>
+    
+                <div class="game-options-container">
+                  
+                   <div class="modal-container" id="option-modal">
+                     
+                        <div class="modal-content-container">
+                             <h1>Вы не выбрали ответ!</h1>
+                          
+                             <div class="modal-button-container">
+                                <button onclick="closeOptionModal()">Продолжить</button>
+                            </div>
+                          
+                        </div>
+                     
+                   </div>
+                  
+                    <span>
+                        <input type="radio" id="option-one" name="option" class="radio" value="optionA" />
+                        <label for="option-one" class="option" id="option-one-label"></label>
+                    </span>
+                  
+    
+                    <span>
+                        <input type="radio" id="option-two" name="option" class="radio" value="optionB" />
+                        <label for="option-two" class="option" id="option-two-label"></label>
+                    </span>
+                  
+    
+                    <span>
+                        <input type="radio" id="option-three" name="option" class="radio" value="optionC" />
+                        <label for="option-three" class="option" id="option-three-label"></label>
+                    </span>
+                  
+    
+                    <span>
+                        <input type="radio" id="option-four" name="option" class="radio" value="optionD" />
+                        <label for="option-four" class="option" id="option-four-label"></label>
+                    </span>
+                    
+    
+                </div>
+    
+                <div class="next-button-container">
+                    <button onclick="handleNextQuestion()">Ответить</button>
+                </div>
+    
+            </div>
+        </main>
+        <article>
+            <div class="container">
+                
+            <h4 class="answer"></h4>    
+            <div id="que1" class="block2">
+              <h2 class="answer2">Автором трактата «Государь» является:</h2>
+              <p class="r0">
+              <input type="radio" name="gender" value="Макиавелли" class="test2"><span class="span-test2">Макиавелли</span><br>
+              <input type="radio" name="gender" value="Аристотель" class="test2"><span class="span-test2">Аристотель</span>
+              </p>
+            </div>
+            
+            <div id="que2" class="block2">
+              <h2 class="answer2">Какие события и явления связаны с правлением ивана IV?</h2>
+              <p class="r1">
+              <input type="checkbox"  value="Ливонская война" class="test2"><span class="span-test2">Ливонская война</span> <br>
+              <input type="checkbox"  value="Присоединение Новгорода" class="test2"><span class="span-test2">Присоединение Новгорода к Москве</span> <br>
+              <input type="checkbox"  value="Принятие судебника" class="test2"><span class="span-test2">Принятие судебника</span>  
+              </p>
+            </div>
+            
+            <div id="que3" class="block2">
+              <h2 class="answer2">Укажите имена правителей Руси, которые не были киевскими князьями:</h2>
+              <p class="r2">
+              <input type="checkbox"  value="Рюрик" class="test2"><span class="span-test2">Рюрик</span>  <br>
+              <input type="checkbox"  value="Олег" class="test2"><span class="span-test2">Олег</span>  <br>
+              <input type="checkbox"  value="Александр Невский" class="test2"><span class="span-test2">Александр Невский</span>  <br>
+              <input type="checkbox"  value="Святослав" class="test2"><span class="span-test2">Святослав</span>  
+              </p>
+            </div>
+            
+            <div id="que5" class="block2">
+              <h2 class="answer2">Видный деятель движения западников:</h2>
+              <p class="r3">
+              <input type="radio" name="game" value="Аксаков" class="test2"><span class="span-test2">Аксаков</span> <br>
+              <input type="radio" name="game" value="Кавелин" class="test2"><span class="span-test2">Кавелин</span> 
+              </p>
+            </div>
+            
+            <div id="que6" class="block2">
+              <h2 class="answer2">В индийской философии общий закон вселенной называется:</h2>
+              <p class="r4">
+              <input type="radio" name="gender2" value="Рита" class="test2"><span class="span-test2">Рита</span> <br>
+              <input type="radio" name="gender2" value="Драхма" class="test2"><span class="span-test2">Драхма</span> 
+              </p>
+            </div>
+            
+            <div id="que7" class="block2">
+              <h2 class="answer2">Кельзин разработал:</h2>
+              <p class="r5">
+              <input type="radio" name="game2" value="Классовую теорию права" class="test2"><span class="span-test2">Классовую теорию права</span> <br>
+              <input type="radio" name="game2" value="Нормативитскую теорию права" class="test2"><span class="span-test2">Нормативитскую теорию права</span> 
+              </p>
+            </div>
+            <a href="javascript:void(0)" class="checkBtn-btn-btn-primary">Продолжить</a>    
+            </div>
+        </article>
+        <script src="скрипты2.js"></script>
+    </body>
+</html>

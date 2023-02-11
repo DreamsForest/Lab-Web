@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+    <link rel="stylesheet" href="Стили4.css">
+	<title>Форма проверки</title>
+</head>
+
+<body>
+	<h1>Форма проверки</h1>
+
+	<!-- Форма проверки -->
+	<div class="form-global">
+		<form action="" class="form" id="add-form">
+		<!-- Разделы -->
+
+		<div class="form-control">
+			<label for="name" id="label-name">ФИО</label>
+
+			<!-- Строка ввода текста -->
+            
+			<div class="input-box">
+                <input type="text" id="name1" placeholder="Введите фамилию, имя, отчество (только русские буквы!)" class="input-field" data-required="true" pattern="^[А-Яа-яЁё\s]+$" title="Разрешено использовать только пробелы и русские буквы">
+            </div>
+            
+		</div>
+
+        <div class="form-control">
+			<label for="role" id="label-role">
+				Учебная группа
+			</label>
+
+			<!-- Выбор из предложенных вариантов -->
+
+			<select name="role" id="role">
+				<option value="ПИб-221">ПИб-221</option>
+				<option value="ПИб-222">ПИб-222</option>
+				<option value="МОСб-221">
+					МОСб-221
+				</option>
+			</select>
+		</div>
+        
+        <div class="form-control">
+			<label for="role" id="label-role">
+				Объем 5-10 стр
+			</label>
+			<select name="role" id="role">
+				<option value="1">5</option>
+				<option value="2">6</option>
+				<option value="3">7</option>
+                <option value="4">8</option>
+                <option value="5">9</option>
+                <option value="6">10</option>
+			</select>
+		</div>
+		
+        <div class="form-control">
+			<label>
+				Единый дизайн для всего проекта
+			</label>
+
+			<!-- Чекер -->
+			<label for="recommed-1">
+				<input type="radio" id="recommed-1" name="recommed1" class="radio">
+					Да
+				</input>
+			</label>
+			<label for="recommed-2">
+				<input type="radio" id="recommed-2" name="recommed1" class="radio">
+					Нет
+				</input>
+			</label>
+		</div>
+
+		<div class="form-control">
+			<label for="age" id="label-age">
+				Общая оценка эстетичности
+			</label>
+            <input type="range" id="volume" name="volume" min="0" max="11">	
+		</div>
+        
+        <div class="form-control">
+			<label for="age" id="label-age">
+				Общая оценка функциональности
+			</label>
+            <input type="range" id="volume" name="volume" min="0" max="11">	
+		</div>
+
+        <div class="form-control">
+			<label for="name" id="label-name">
+				Количество CSS-файлов в впроекте
+			</label>
+
+			<!-- ВВод текста -->
+			<div class="input-box">
+				<input  id="name" placeholder="Введите количество файлов в проекте (только цифры!)" data-required="true" class="myValidate"/>
+			</div>
+		</div>
+
+        <div class="form-control">
+			<label>
+				Индивидуальный дизайн для главной страницы
+			</label>
+
+			<!-- Чекер -->
+			<label for="recommed-1">
+				<input type="radio" id="recommed-1" name="recommed2" value='5' onchange='calc()'>Да</input>
+			</label>
+			<label for="recommed-2">
+				<input type="radio" id="recommed-2" name="recommed2" value='0' onchange='calc()'>Нет</input>
+			</label>
+		</div>
+
+		<div class="form-control">
+			<label>Выражен:
+			</label>
+			<label for="inp-1">
+				<input type="checkbox" name="inp">- большим графическим элементом</input>
+			</label>
+			<label for="inp-2">
+				<input type="checkbox" name="inp">- слайдером</input>
+			</label>
+			<label for="inp-3">
+				<input type="checkbox" name="inp">- блоком с анимацией</input>
+			</label>
+			<label for="inp-4">
+				<input type="checkbox" name="inp">- специфическим отображением меню</input>
+			</label>
+			<label for="inp-5">
+				<input type="checkbox" name="inp">- другое</input>
+			</label>
+		</div>
+
+        <div class="form-control">
+			<label>
+				Адаптивная верстка
+			</label>
+			<label for="recommed-1">
+				<input type="radio" id="recommed-1" name="recommed3" value='5' onchange='calc()'>Да</input>
+			</label>
+			<label for="recommed-2">
+				<input type="radio" id="recommed-2" name="recommed3" value='0' onchange='calc()'>Нет</input>
+			</label>
+		</div>
+
+        <div class="form-control">
+			<label>
+				Использование медиазапросов
+			</label>
+			<label for="recommed-1">
+				<input type="radio" id="recommed-1" name="recommed4" value='5' onchange='calc()'>Да</input>
+			</label>
+			<label for="recommed-2">
+				<input type="radio" id="recommed-2" name="recommed4" value='0' onchange='calc()'>Нет</input>
+			</label>
+		</div>
+   
+        <div class="form-control">
+			<label>
+				Перекомпоновка блоков 
+			</label>
+			<label for="recommed-1">
+				<input type="radio" id="recommed-1" name="recommed5" value='5' onchange='calc()'>Да</input>
+			</label>
+			<label for="recommed-2">
+				<input type="radio" id="recommed-2" name="recommed5" value='0' onchange='calc()'>Нет</input>
+			</label>
+		</div>
+
+		<div class="form-control">
+			<label for="comment">
+				другое
+			</label>
+			<div class="input-box">
+			<div class="input-box">
+				<input name="text" id="comment" placeholder="Введите текст" data-min-length="5" data-max-length="30" data-required="true" class="input-field"></input>
+			</div>
+			</div>
+		</div>
+
+		<div class="form-control">
+			<label>
+				Выпадающее меню
+			</label>
+			<label for="recommed-1">
+				<input type="radio" id="recommed-1" name="recommed6" value='5' onchange='calc()'>Да</input>
+			</label>
+			<label for="recommed-2">
+				<input type="radio" id="recommed-2" name="recommed6" value='0' onchange='calc()'>Нет</input>
+			</label>
+		</div>
+
+		<div class="form-control">
+			<label for="role" id="label-role">
+				Эффект применен для главного меню, дополнительного меню
+			</label>
+
+			<!-- Выбор из предложенных вариантов -->
+
+			<select name="role" id="role">
+				<option value="ПИб-221">Выбор 1</option>
+				<option value="ПИб-222">Выбор 2</option>
+				<option value="МОСб-221">
+					Выбор 3
+				</option>
+			</select>
+		</div>
+
+		
+		<div class="form-control">
+			<label>
+				Галерея изображений
+			</label>
+			<label for="recommed-1">
+				<input type="radio" id="recommed-1" name="recommed7" value='5' onchange='calc()'>Да</input>
+			</label>
+			<label for="recommed-2">
+				<input type="radio" id="recommed-2" name="recommed7" value='0' onchange='calc()'>Нет</input>
+			</label>
+		</div>
+
+		<div class="form-control">
+			<label for="role" id="label-role">
+				Примененные эффекты:
+			</label>
+
+			<!-- Выбор из предложенных вариантов -->
+
+			<select name="role" id="role">
+				<option value="ПИб-221">эффект прозрачности</option>
+				<option value="ПИб-222">эффект наведения</option>
+				<option value="МОСб-221">эффект появления</option>
+				<option value="ПИб-221">другое</option>
+			</select>
+		</div>
+
+		<div class="form-control">
+			<label>
+				Для каждого из требований «переходы, трансформации или анимация»
+			</label>
+			<label for="recommed-1">
+				<input type="radio" id="recommed-1" name="recommed8" value='5' onchange='calc()'>Да</input>
+			</label>
+			<label for="recommed-2">
+				<input type="radio" id="recommed-2" name="recommed8" value='0' onchange='calc()'>Нет</input>
+			</label>
+			<div class="input-box">
+				<input type="text" id="name" placeholder="строка для страницы с этим элементом"  data-required="true" class="input-field"/>
+			</div>
+		</div>
+
+		<div class="form-control">
+			<label>
+				Форма обратной связи
+			</label>
+			<label for="recommed-1">
+				<input type="radio" id="recommed-1" name="recommed9" value='5' onchange='calc()'>Да</input>
+			</label>
+			<label for="recommed-2">
+				<input type="radio" id="recommed-2" name="recommed9" value='0' onchange='calc()'>Нет</input>
+			</label>
+			<div class="input-box">
+				<input type="text" id="name" placeholder="строка для страницы с этим элементом"  data-required="true" class="input-field"/>
+			</div>
+		</div>
+
+		<div class="form-control">
+			<label for="role" id="label-role">
+				Использование тегов разделов документа
+			</label>
+			<select name="role" id="role">
+				<option value="ПИб-221">header</option>
+				<option value="ПИб-222">nav</option>
+				<option value="МОСб-221">footer</option>
+				<option value="ПИб-222">section</option>
+				<option value="ПИб-222">article</option>
+				<option value="ПИб-222">aside</option>
+			</select>
+		</div>
+
+		<div class="form-control">
+			<label>
+				Выполнение дополнительной лабораторной №10
+			</label>
+			<label for="recommed-1">
+				<input type="radio" id="recommed-1" name="recommed00"  value='5' onchange='calc()'>Да</input>
+			</label>
+			<label for="recommed-2">
+				<input type="radio" id="recommed-2" name="recommed00"  value='0' onchange='calc()'>Нет</input>
+			</label>
+		</div>
+		<input type="text" id='trouble_itog' readonly>
+		<button type="submit">
+			Отправить
+		</button>
+		</form>
+	</div>
+    <script  src="Скрипты4.js"></script>
+</body>
+
+</html>
