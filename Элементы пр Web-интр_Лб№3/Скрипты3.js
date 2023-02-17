@@ -50,48 +50,48 @@ function handleNextQuestion7(){
    
         if(otvet1 == "1721"){
             i += 1;
-            const element11 = document.querySelector('.game-question-container1');                                                //Белая кнопка с белым фоном
+            const element11 = document.querySelector('.game-question-container1');                                                
             element11.style.background = "#00FF00";
         }
         if(otvet1 != "1721"){
             document.querySelector('.otvetnavopros1').innerHTML = "Это не правильный ответ. Правильный ответ - 1721";
-            const element12 = document.querySelector('.game-question-container1');                                                //Белая кнопка с белым фоном
+            const element12 = document.querySelector('.game-question-container1');                                               
             element12.style.background = "#FF0000";
         }
 
 
         if(otvet2 == "1861"){
             i += 1;
-            const element21 = document.querySelector('.game-question-container2');                                                //Белая кнопка с белым фоном
+            const element21 = document.querySelector('.game-question-container2');                                                
             element21.style.background = "#00FF00";
         }
         if(otvet2 != "1861"){
             document.querySelector('.otvetnavopros2').innerHTML = "Это не правильный ответ. Правильный ответ - 1861";
-            const element22 = document.querySelector('.game-question-container2');                                                //Белая кнопка с белым фоном
+            const element22 = document.querySelector('.game-question-container2');                                              
             element22.style.background = "#FF0000";
         }
 
 
         if(otvet3 == "1812"){
             i += 1;
-            const element31 = document.querySelector('.game-question-container3');                                                //Белая кнопка с белым фоном
+            const element31 = document.querySelector('.game-question-container3');                                                
             element31.style.background = "#00FF00";
         }
         if (otvet3 != "1812"){
             document.querySelector('.otvetnavopros3').innerHTML = "Это не правильный ответ. Правильный ответ - 1812";
-            const element32 = document.querySelector('.game-question-container3');                                                //Белая кнопка с белым фоном
+            const element32 = document.querySelector('.game-question-container3');                                                
             element32.style.background = "#FF0000";
         }
 
 
         if(otvet4 == "988"){
             i += 1;
-            const element41 = document.querySelector('.game-question-container4');                                                //Белая кнопка с белым фоном
+            const element41 = document.querySelector('.game-question-container4');                                                
             element41.style.background = "#00FF00";
         }
         if(otvet4 != "988"){
             document.querySelector('.otvetnavopros4').innerHTML = "Это не правильный ответ. Правильный ответ - 988";
-            const element42 = document.querySelector('.game-question-container4');                                                //Белая кнопка с белым фоном
+            const element42 = document.querySelector('.game-question-container4');                                              
             element42.style.background = "#FF0000";
         }
 
