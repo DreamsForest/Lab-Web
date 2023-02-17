@@ -5,85 +5,53 @@
     <title>Опросник</title>
     <link rel="stylesheet" href="Стили3.css">
 </head>
-<body onload="NextQuestion(0)">
+<body>
         <main>
             <!-- Вывод результата теста -->
-            <div class="modal-container" id="score-modal">
-              
-                <div class="modal-content-container">
-                  
-                    <h1>Результат теста по Истории.</h1>
-                  
-                    <div class="grade-details">
-                        <p>Дано ответов : 10</p>
-                        <p>Неправильных ответов : <span id="wrong-answers"></span></p>
-                        <p>Правильных ответов : <span id="right-answers"></span></p>
-                        <p>Оценка : <span id="grade-percentage"></span>%</p>
-                        <p ><span id="remarks"></span></p>
-                    </div>
-                  
-                    <div class="modal-button-container">
-                        <button onclick="closeScoreModal()">Продолжить</button>
-                    </div>
-                  
-                </div>
-            </div>
+            
     
             <div class="game-quiz-container">
-              
-                <div class="game-details-container">
-                    <h1>Очки : <span id="player-score"></span> / 10</h1>
-                    <h1> Вопросы : <span id="question-number"></span> / 10</h1>
-                </div>
-    
+
                 <div class="game-question-container">
-                    <h1 id="display-question"></h1>
+                    <h1 id="display-question" class="game-question-container1">С какого года Россия стала гордо называться империей ?</h1>
                 </div>
-    
-                <div class="game-options-container">
-                  
-                   <div class="modal-container" id="option-modal">
-                     
-                        <div class="modal-content-container">
-                             <h1>Вы не выбрали ответ!</h1>
-                          
-                             <div class="modal-button-container">
-                                <button onclick="closeOptionModal()">Продолжить</button>
-                            </div>
-                          
-                        </div>
-                     
-                   </div>
-                  
-                    <span>
-                        <input type="radio" id="option-one" name="option" class="radio" value="optionA" />
-                        <label for="option-one" class="option" id="option-one-label"></label>
-                    </span>
-                  
-    
-                    <span>
-                        <input type="radio" id="option-two" name="option" class="radio" value="optionB" />
-                        <label for="option-two" class="option" id="option-two-label"></label>
-                    </span>
-                  
-    
-                    <span>
-                        <input type="radio" id="option-three" name="option" class="radio" value="optionC" />
-                        <label for="option-three" class="option" id="option-three-label"></label>
-                    </span>
-                  
-    
-                    <span>
-                        <input type="radio" id="option-four" name="option" class="radio" value="optionD" />
-                        <label for="option-four" class="option" id="option-four-label"></label>
-                    </span>
-    
-    
-                </div>
-    
+                <div class="otvetnavopros1"></div>
                 <div class="next-button-container">
-                    <button onclick="handleNextQuestion()">Ответить</button>
+                    <button onclick="handleNextQuestion1()" class="ispravit1">Ответить</button>
                 </div>
+
+
+                <div class="game-question-container">
+                    <h1 id="display-question" class="game-question-container2">В каком году отменили крепостное право в России ?</h1>
+                </div>
+                <div class="otvetnavopros2"></div>
+                <div class="next-button-container">
+                    <button onclick="handleNextQuestion2()" class="ispravit2">Ответить</button>
+                </div>
+
+
+                <div class="game-question-container">
+                    <h1 id="display-question" class="game-question-container3">В каком году было Бородинское сражение?</h1>
+                </div>
+                <div class="otvetnavopros3"></div>
+                <div class="next-button-container">
+                    <button onclick="handleNextQuestion3()" class="ispravit3">Ответить</button>
+                </div>
+
+
+                <div class="game-question-container">
+                    <h1 id="display-question" class="game-question-container4">В каком году было крещение Руси ?</h1>
+                </div>
+                <div class="otvetnavopros4"></div>
+                <div class="next-button-container">
+                    <button onclick="handleNextQuestion4()"class="ispravit4">Ответить</button>
+                </div>
+
+                <div class="otvetnavopros7"></div>
+                <div class="next-button-container">
+                    <button onclick="handleNextQuestion7()">Закончить тест</button>
+                </div>
+    
     
             </div>
         </main>
